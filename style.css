@@ -12,6 +12,7 @@ nav{
   margin-top: -3px;
   display: flex;
 }
+/* seção de perguntas */
  .perguntas{
     background-color:#FFF;
     width: 90%;
@@ -20,6 +21,7 @@ nav{
     border-radius: 10px;
     padding: 30px; 
  }
+ /* Título das Perguntas */
  .perguntas h2{
     font-weight: 700;
     color:#156082;
@@ -27,11 +29,13 @@ nav{
     padding-bottom: 10px; 
     margin-top: auto;
  }
+ /* Título do Quiz */
  .quiz h2{
    font-size: 18px;
    color:#1A1E3F;
-   font-weight: 300px;   
+   font-weight: 300;   
 }
+/* Botões de Respostas */
  .botão{
    background: #FFF;
    color: #222;
@@ -50,8 +54,9 @@ nav{
    color: #FFFFFF;
  }
  .botão:disabled{
-  cursor: no-drop;
+  cursor: not-allowed;
  }
+ /* Botão Próximo */
  #botao-proximo{
    background: #1A1E3F;
    color: #FFFFFF;
@@ -64,6 +69,7 @@ nav{
    cursor: pointer;
    display: none;
  }
+ /* Feedback das respostas*/
  .correto{
   background:#00B050;
   color: #FFF;

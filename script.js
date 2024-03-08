@@ -1,4 +1,4 @@
-//alert("Bem-vindo(a) Jogador(a)! Qual o seu nome?");
+//Perguntas e opções de respostas
 const perguntas = [
     {
         pergunta: "Quais são os princípios da segurança da informação?", 
@@ -118,7 +118,7 @@ function startQuiz(){
 function mostraPergunta(){
     redefinir();
     //Exibe a pergunta atual
-    let perguntaAtual = perguntas[indexPerguntaAtual]; // perguntas = const perguntas, arrays.
+    let perguntaAtual = perguntas[indexPerguntaAtual]; 
     let numeroPergunta = indexPerguntaAtual + 1;
     perguntasQuiz.innerHTML = numeroPergunta + ". " + perguntaAtual.pergunta; 
     //Exibi as opções de respostas
@@ -140,7 +140,7 @@ function redefinir(){
         botãoRespostas.removeChild(botãoRespostas.firstChild);
     }
 }
-//verifica se a resposta selecionada esta correta e sinaliza com cores o resultado.
+//verifica se a resposta selecionada esta correta.
 function verificaResposta(a){
     const selectBtn = a.target;
     const estaCorreto = selectBtn.dataset.correção === "true"; 
@@ -150,7 +150,7 @@ function verificaResposta(a){
     }else{
         selectBtn.classList.add("incorreto");
     }
-    //Cria uma array, com as opções do Id respostas.
+    //verifica qual resposta consta como true.
     Array.from(botãoRespostas.children).forEach(botão => {
         if (botão.dataset.correção === "true"){
             botão.classList.add("correto");
@@ -161,6 +161,7 @@ function verificaResposta(a){
     //Exibe o botão próximo, para seguir para a próxima pergunta.
     botãoProximo.style.display = "block";
 }
+//mostra os pontos ao final do jogo.
 function mostrePontos(){
     redefinir();
     perguntasQuiz.innerHTML = `Você marcou ${pontos} de ${perguntas.length}!`;
@@ -168,7 +169,7 @@ function mostrePontos(){
     botãoProximo.style.display = "block";
 
 }
-function chameProximoBotao(){
+function chamaProximaPergunta(){ 
     indexPerguntaAtual++;
     if(indexPerguntaAtual < perguntas.length){
         mostraPergunta();
@@ -178,7 +179,7 @@ function chameProximoBotao(){
 }
 botãoProximo.addEventListener("click", ()=>{
     if(indexPerguntaAtual < perguntas.length){
-        chameProximoBotao();
+        chamaProximaPergunta();
     }else{
         startQuiz();
     }

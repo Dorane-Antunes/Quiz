@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vincula o arquivo CSS chamado "style.css" -->
     <link rel="stylesheet" href="style.css">
     <title>Quiz</title>
 </head>
 <body>
     <header>
+        <!-- Imagem utilizada no cabeçalho do Quiz" -->
         <div class="imagem">
             <picture>
-                <img src="Imagens/Quiz_2.png" alt="Quiz Sistema de informação"> 
+                <img src="Imagens/Quiz_2.png" alt="Quiz Sistema da informação"> 
             </picture>
             <nav></nav>
         </div>
     </header>
+    <!-- Perguntas do quiz -->
     <div class="perguntas">
         <h2>Quiz</h2>
         <div class="quiz">
+            <!-- Atualização dinâmica das perguntas -->
             <h3 id="assunto">Perguntas apararecem aqui</h3>
+            <!-- Botões para cada pergunta -->
             <div id="respostas">
                 <button class="botão">Pergunta 1</button>
                 <button class="botão">Pergunta 2</button>
@@ -31,10 +36,11 @@
                 <button class="botão">Pergunta 9</button>
                 <button class="botão">Pergunta 10</button>
             </div>     
+            <!-- Botão "Próximo" para avançar no quiz -->
             <button id="botao-proximo">Próximo</button>   
         </div>
-
     </div>
+    <!-- Vincula o arquivo javaScript chamado "script.js" -->
     <script src="script.js"></script>    
 </body>
 </html>
